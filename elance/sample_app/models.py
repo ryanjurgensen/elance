@@ -17,7 +17,7 @@ class Article(models.Model):
 	negative_ratings = models.ManyToManyField(ArticleUser, related_name='negative_ratings')
 
 	@staticmethod
-	def get_top_articles_by_type(self, type):
+	def get_top_articles_by_type(self, article_type):
 		'''
 		Given a string type, like "blog", return the top 5 articles with the most positive ratings.
 		'''
